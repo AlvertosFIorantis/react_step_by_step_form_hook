@@ -1,0 +1,210 @@
+#wrapper {
+  width: 90%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 40rem;
+  background-color: #fff;
+  position: relative;
+  padding: 10rem 0;
+  box-shadow: 0 1px 1.5rem rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  z-index: 1;
+}
+
+.form-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 25rem;
+  background: linear-gradient(to left, rgb(138, 190, 178), #61dafb);
+
+  border-bottom-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+  z-index: -1;
+}
+
+.form-heading {
+  color: #fff;
+  font-size: 2.5rem;
+  position: absolute;
+  top: 3.5rem;
+  left: 10rem;
+}
+
+form {
+  transform: translateX(10rem);
+  padding: 2rem 0;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 1px 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: baseline;
+}
+
+.input-group input {
+  position: relative;
+  width: 100%;
+  padding: 1rem 0rem;
+  margin-top: 0.5rem;
+  border: none;
+  outline: none;
+  font-size: 1.8rem;
+  color: rgb(138, 190, 178);
+}
+
+.input-group > i {
+  font-size: 2rem;
+  margin-right: 0rem;
+  color: rgb(138, 190, 178);
+}
+
+.input-group .bar {
+  position: absolute;
+
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 1px;
+}
+
+.input-group .bar::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(138, 190, 178);
+  width: 0;
+  height: 2px;
+  transition: width 650ms;
+  padding: 0;
+  margin: 0;
+  left: 0%;
+  /* gia na ksekinaei apo tin arxei to highlight */
+}
+
+.input-group input:focus + .bar::before {
+  width: 100%;
+}
+
+.input-group button {
+  margin: 3rem auto;
+  padding: 1rem 3rem;
+  /* AFTO NA ALAKSO AN DNE MOU ARESI TO SPACING STA KOUBIA */
+  background: rgb(138, 190, 178);
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 3rem;
+}
+
+.input-group button:focus,
+.input-group button:hover {
+  background: #61dafb;
+}
+
+.switch-login {
+  text-align: center;
+}
+
+.switch-login a {
+  text-decoration: none;
+  color: #a1a1a1;
+  font-size: 1.5rem;
+}
+
+.switch-login a span {
+  color: rgb(138, 190, 178);
+}
+
+.switch-login a span:hover {
+  padding-bottom: 2px;
+  border-bottom: 2px solid rgb(138, 190, 178);
+}
+
+/* my extra css */
+.container {
+  margin-top: 10rem;
+}
+
+.my-container {
+  width: 70%;
+  height: 100vh;
+  margin: 0 auto;
+  display: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+  min-width: 400px;
+}
+
+.my-container_confirm {
+  width: 70%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  min-width: 400px;
+}
+
+input::placeholder {
+  color: rgb(196, 194, 194);
+  /* alaksa to xroma apo to placeholder oste na fenete muted */
+}
+
+/* gia to confirmation page */
+.list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.list li {
+  padding: 10px;
+  border-bottom: 1px solid #dddddd;
+}
+.list li:nth-child(odd) {
+  background-color: rgb(138, 190, 178);
+}
+.list li:nth-child(even) {
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  border: 0;
+}
+
+.list li:last-child {
+  border: 0;
+}
+
+.list li:nth-child(even):hover {
+  background-color: #fffbc3;
+}
+
+@media screen and (max-width: 700px) {
+  .form-container::before {
+    height: 10rem;
+  }
+
+  .form-heading {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  form {
+    border-radius: initial;
+    transform: inherit;
+    box-shadow: none;
+  }
+}
